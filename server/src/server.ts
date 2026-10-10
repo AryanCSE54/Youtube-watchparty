@@ -8,7 +8,7 @@ import { registerSocketHandlers } from "./socket/socketHandlers.js";
 const app = express();
 const httpServer = createServer(app);
 const port = Number(process.env.PORT) || 3001;
-const allowedOrigin = process.env.CLIENT_URL || "http://localhost:5173";
+const allowedOrigin = process.env.CLIENT_URL || "https://youtube-watchparty-ashy.vercel.app";
 
 app.use(cors({ origin: allowedOrigin.split(",").map(s => s.trim()), credentials: true }));
 app.use(express.json());
